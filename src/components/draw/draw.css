@@ -1,0 +1,76 @@
+.body-draw {
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("https://static7.depositphotos.com/1001194/738/i/450/depositphotos_7384535-stock-photo-abstract-watercolor-background.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 150vh;
+}
+
+.body-canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.herramientas-container {
+    width: 250px;
+    height: 500px;
+    background-color: white;
+    display: block;
+}
+
+.canvas-container {
+    width: 800px;
+    height: 500px;
+}
+
+.canvas-draw {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+}
+
+.color-container {
+    display: block;
+}
+
+.color-tshirt-white {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border: 1px solid black;
+}
+
+.color-tshirt {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.form-select {
+    width: 100%;
+    height: 30px;
+    margin-top: 50px;
+}
+
+
+@media(max-width: 800px) {
+
+    .canvas-container {
+        width: 95%;
+        height: 100%;
+    }
+
+
+}
