@@ -12,6 +12,7 @@ function Draw() {
     const canvasRef = useRef(null);
     const contextRef = useRef(null);
     const [isDrawing, setIsDrawing] = useState(false);
+    const [state, setState] = useState("false");
 
     useEffect(() => {
 
@@ -245,6 +246,42 @@ function Draw() {
 
     };
 
+    const onClickImagen = (e) => {
+
+        if (e.target.value === "Quitar Imagen") {
+            setState("false")
+        }
+
+        if (e.target.value === "Caballo") {
+            setState("Caballo")
+        }
+
+        if (e.target.value === "Elefante") {
+            setState("Elefante")
+        }
+
+        if (e.target.value === "Familia") {
+            setState("Familia")
+        }
+
+        if (e.target.value === "Dragon Ball") {
+            setState("Dragon Ball")
+        }
+
+        if (e.target.value === "Barbie") {
+            setState("Barbie")
+        }
+
+        if (e.target.value === "Casa") {
+            setState("Casa")
+        }
+
+        if (e.target.value === "Paisajes") {
+            setState("Paisajes")
+        }
+
+    };
+
 
     return (
 
@@ -292,17 +329,124 @@ function Draw() {
                         <option>25</option>
                     </select>
 
+                    <select className="form-select" onChange={(e) => onClickImagen(e)}>
+                        <option>Imagen de fondo</option>
+                        <option>Quitar Imagen</option>
+                        <option>Caballo</option>
+                        <option>Elefante</option>
+                        <option>Familia</option>
+                        <option>Dragon Ball</option>
+                        <option>Barbie</option>
+                        <option>Casa</option>
+                        <option>Paisajes</option>
+                    </select>
+
                 </div>
 
-                <div className="canvas-container">
-                    <canvas
-                        className="canvas-draw"
-                        onMouseDown={startDrawing}
-                        onMouseUp={finishDrawing}
-                        onMouseMove={draw}
-                        ref={canvasRef}
-                    ></canvas>
-                </div>
+                {state === "false" ?
+                    <div className="canvas-container">
+                        <canvas
+                            className="canvas-draw"
+                            onMouseDown={startDrawing}
+                            onMouseUp={finishDrawing}
+                            onMouseMove={draw}
+                            ref={canvasRef}
+                        ></canvas>
+                    </div>
+                    :
+                    null}
+
+
+                {state === "Caballo" ?
+                    <div className="canvas-container">
+                        <canvas
+                            className="canvas-draw-1"
+                            onMouseDown={startDrawing}
+                            onMouseUp={finishDrawing}
+                            onMouseMove={draw}
+                            ref={canvasRef}
+                        ></canvas>
+                    </div>
+                    :
+                    null}
+
+                {state === "Elefante" ?
+                    <div className="canvas-container">
+                        <canvas
+                            className="canvas-draw-2"
+                            onMouseDown={startDrawing}
+                            onMouseUp={finishDrawing}
+                            onMouseMove={draw}
+                            ref={canvasRef}
+                        ></canvas>
+                    </div>
+                    :
+                    null}
+
+                {state === "Familia" ?
+                    <div className="canvas-container">
+                        <canvas
+                            className="canvas-draw-3"
+                            onMouseDown={startDrawing}
+                            onMouseUp={finishDrawing}
+                            onMouseMove={draw}
+                            ref={canvasRef}
+                        ></canvas>
+                    </div>
+                    :
+                    null}
+
+                {state === "Dragon Ball" ?
+                    <div className="canvas-container">
+                        <canvas
+                            className="canvas-draw-4"
+                            onMouseDown={startDrawing}
+                            onMouseUp={finishDrawing}
+                            onMouseMove={draw}
+                            ref={canvasRef}
+                        ></canvas>
+                    </div>
+                    :
+                    null}
+
+                {state === "Barbie" ?
+                    <div className="canvas-container">
+                        <canvas
+                            className="canvas-draw-5"
+                            onMouseDown={startDrawing}
+                            onMouseUp={finishDrawing}
+                            onMouseMove={draw}
+                            ref={canvasRef}
+                        ></canvas>
+                    </div>
+                    :
+                    null}
+
+                {state === "Casa" ?
+                    <div className="canvas-container">
+                        <canvas
+                            className="canvas-draw-6"
+                            onMouseDown={startDrawing}
+                            onMouseUp={finishDrawing}
+                            onMouseMove={draw}
+                            ref={canvasRef}
+                        ></canvas>
+                    </div>
+                    :
+                    null}
+
+                {state === "Paisajes" ?
+                    <div className="canvas-container">
+                        <canvas
+                            className="canvas-draw-7"
+                            onMouseDown={startDrawing}
+                            onMouseUp={finishDrawing}
+                            onMouseMove={draw}
+                            ref={canvasRef}
+                        ></canvas>
+                    </div>
+                    :
+                    null}
 
             </div>
 

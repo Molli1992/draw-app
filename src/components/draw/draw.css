@@ -35,6 +35,83 @@
     background-color: white;
 }
 
+.canvas-draw-1 {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    background-image: url("https://png.pngtree.com/png-vector/20220615/ourmid/pngtree-cute-horse-coloring-contour-book-png-image_5088598.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.canvas-draw-2 {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    background-image: url("https://cdn.pixabay.com/photo/2023/03/17/15/07/coloring-page-7858816_1280.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.canvas-draw-3 {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    background-image: url("https://i.pinimg.com/originals/d2/f4/f4/d2f4f4c315efe90de44f44dd9b0c3c21.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.canvas-draw-4 {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    background-image: url("https://www.morningkids.net/coloriages/2231/g/fortnite-relax-g-17.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.canvas-draw-5 {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    background-image: url("https://i.pinimg.com/originals/f9/eb/18/f9eb182fbd74b917f03bb90ac4d82d7e.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.canvas-draw-6 {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    background-image: url("https://www.cool2bkids.com/wp-content/uploads/2019/10/Imagenes-de-Dibujos-de-Casa-Para-Colorear.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.canvas-draw-7 {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    background-image: url("https://coloreardibujosgratis.com/dibujo/naturaleza/colorear-paisaje-165764.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .color-container {
     display: block;
 }
@@ -42,7 +119,6 @@
 .color-tshirt-white {
     height: 50px;
     width: 50px;
-    border-radius: 50%;
     margin: 10px;
     cursor: pointer;
     border: none;
@@ -61,7 +137,7 @@
 .form-select {
     width: 100%;
     height: 30px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 
