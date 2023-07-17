@@ -2,6 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import "./draw.css";
 import Navbar from "../navbar/navbar";
 import Navigation from "../navigation/navigation";
+import DrawOne from "./draw-1";
+import DrawTwo from "./draw-2";
+import DrawThree from "./draw-3";
+import DrawFour from "./draw-4";
+import DrawFive from "./draw-5";
+import DrawSix from "./draw-6";
+import DrawSeven from "./draw-7";
+import DrawNone from "./draw-none";
 
 
 
@@ -249,7 +257,7 @@ function Draw() {
     const onClickImagen = (e) => {
 
         if (e.target.value === "Quitar Imagen") {
-            setState("false")
+            setState("None")
         }
 
         if (e.target.value === "Caballo") {
@@ -282,7 +290,6 @@ function Draw() {
 
     };
 
-
     return (
 
         <div className="body-draw">
@@ -290,60 +297,61 @@ function Draw() {
             <Navbar />
             <Navigation />
 
-            <div className="body-canvas">
+            <select className="form-select" onChange={(e) => onClickImagen(e)}>
+                <option>Elige una imagen para poder pintar</option>
+                <option>Quitar Imagen</option>
+                <option>Caballo</option>
+                <option>Elefante</option>
+                <option>Familia</option>
+                <option>Dragon Ball</option>
+                <option>Barbie</option>
+                <option>Casa</option>
+                <option>Paisajes</option>
+            </select>
 
-                <div className="herramientas-container">
+            {state === "false" ?
 
-                    <div className="color-container">
+                <div className="body-canvas">
 
-                        <button className="color-tshirt-white" style={{ background: "white" }} onClick={colorwhite}></button>
-                        <button className="color-tshirt" style={{ background: "red" }} onClick={colorred}></button>
-                        <button className="color-tshirt" style={{ background: "green" }} onClick={colorgreen}></button>
-                        <button className="color-tshirt" style={{ background: "gray" }} onClick={colorgray}></button>
-                        <button className="color-tshirt" style={{ background: "yellow" }} onClick={coloryellow}></button>
-                        <button className="color-tshirt" style={{ background: "violet" }} onClick={colorviolet}></button>
-                        <button className="color-tshirt" style={{ background: "purple" }} onClick={colorpurple}></button>
-                        <button className="color-tshirt" style={{ background: "maroon" }} onClick={colormaroon}></button>
-                        <button className="color-tshirt" style={{ background: "fuchsia" }} onClick={colorfuchsia}></button>
-                        <button className="color-tshirt" style={{ background: "teal" }} onClick={colorteal}></button>
-                        <button className="color-tshirt" style={{ background: "	lime" }} onClick={colorlime}></button>
-                        <button className="color-tshirt" style={{ background: "olive" }} onClick={colorolive}></button>
-                        <button className="color-tshirt" style={{ background: "navy" }} onClick={colornavy}></button>
-                        <button className="color-tshirt" style={{ background: "aqua" }} onClick={coloraqua}></button>
-                        <button className="color-tshirt" style={{ background: "black" }} onClick={colorblack}></button>
+                    <div className="herramientas-container">
+
+                        <div className="color-container">
+
+                            <button className="color-tshirt-white" style={{ background: "white" }} onClick={colorwhite}></button>
+                            <button className="color-tshirt" style={{ background: "red" }} onClick={colorred}></button>
+                            <button className="color-tshirt" style={{ background: "green" }} onClick={colorgreen}></button>
+                            <button className="color-tshirt" style={{ background: "gray" }} onClick={colorgray}></button>
+                            <button className="color-tshirt" style={{ background: "yellow" }} onClick={coloryellow}></button>
+                            <button className="color-tshirt" style={{ background: "violet" }} onClick={colorviolet}></button>
+                            <button className="color-tshirt" style={{ background: "purple" }} onClick={colorpurple}></button>
+                            <button className="color-tshirt" style={{ background: "maroon" }} onClick={colormaroon}></button>
+                            <button className="color-tshirt" style={{ background: "fuchsia" }} onClick={colorfuchsia}></button>
+                            <button className="color-tshirt" style={{ background: "teal" }} onClick={colorteal}></button>
+                            <button className="color-tshirt" style={{ background: "	lime" }} onClick={colorlime}></button>
+                            <button className="color-tshirt" style={{ background: "olive" }} onClick={colorolive}></button>
+                            <button className="color-tshirt" style={{ background: "navy" }} onClick={colornavy}></button>
+                            <button className="color-tshirt" style={{ background: "aqua" }} onClick={coloraqua}></button>
+                            <button className="color-tshirt" style={{ background: "black" }} onClick={colorblack}></button>
+
+                        </div>
+
+                        <select className="form-select" onChange={(e) => onChangeSizePincel(e)}>
+                            <option>Tamaño del pincel</option>
+                            <option>5</option>
+                            <option>7</option>
+                            <option>9</option>
+                            <option>11</option>
+                            <option>13</option>
+                            <option>15</option>
+                            <option>17</option>
+                            <option>19</option>
+                            <option>21</option>
+                            <option>23</option>
+                            <option>25</option>
+                        </select>
 
                     </div>
 
-                    <select className="form-select" onChange={(e) => onChangeSizePincel(e)}>
-                        <option>Tamaño del pincel</option>
-                        <option>5</option>
-                        <option>7</option>
-                        <option>9</option>
-                        <option>11</option>
-                        <option>13</option>
-                        <option>15</option>
-                        <option>17</option>
-                        <option>19</option>
-                        <option>21</option>
-                        <option>23</option>
-                        <option>25</option>
-                    </select>
-
-                    <select className="form-select" onChange={(e) => onClickImagen(e)}>
-                        <option>Imagen de fondo</option>
-                        <option>Quitar Imagen</option>
-                        <option>Caballo</option>
-                        <option>Elefante</option>
-                        <option>Familia</option>
-                        <option>Dragon Ball</option>
-                        <option>Barbie</option>
-                        <option>Casa</option>
-                        <option>Paisajes</option>
-                    </select>
-
-                </div>
-
-                {state === "false" ?
                     <div className="canvas-container">
                         <canvas
                             className="canvas-draw"
@@ -353,102 +361,51 @@ function Draw() {
                             ref={canvasRef}
                         ></canvas>
                     </div>
-                    :
-                    null}
 
+                </div>
+                :
+                null
+            }
 
-                {state === "Caballo" ?
-                    <div className="canvas-container">
-                        <canvas
-                            className="canvas-draw-1"
-                            onMouseDown={startDrawing}
-                            onMouseUp={finishDrawing}
-                            onMouseMove={draw}
-                            ref={canvasRef}
-                        ></canvas>
-                    </div>
-                    :
-                    null}
+            {state === "Caballo" ?
+                <DrawOne />
+                :
+                null}
 
-                {state === "Elefante" ?
-                    <div className="canvas-container">
-                        <canvas
-                            className="canvas-draw-2"
-                            onMouseDown={startDrawing}
-                            onMouseUp={finishDrawing}
-                            onMouseMove={draw}
-                            ref={canvasRef}
-                        ></canvas>
-                    </div>
-                    :
-                    null}
+            {state === "Elefante" ?
+                <DrawTwo />
+                :
+                null}
 
-                {state === "Familia" ?
-                    <div className="canvas-container">
-                        <canvas
-                            className="canvas-draw-3"
-                            onMouseDown={startDrawing}
-                            onMouseUp={finishDrawing}
-                            onMouseMove={draw}
-                            ref={canvasRef}
-                        ></canvas>
-                    </div>
-                    :
-                    null}
+            {state === "Familia" ?
+                <DrawThree />
+                :
+                null}
 
-                {state === "Dragon Ball" ?
-                    <div className="canvas-container">
-                        <canvas
-                            className="canvas-draw-4"
-                            onMouseDown={startDrawing}
-                            onMouseUp={finishDrawing}
-                            onMouseMove={draw}
-                            ref={canvasRef}
-                        ></canvas>
-                    </div>
-                    :
-                    null}
+            {state === "Dragon Ball" ?
+                <DrawFour />
+                :
+                null}
 
-                {state === "Barbie" ?
-                    <div className="canvas-container">
-                        <canvas
-                            className="canvas-draw-5"
-                            onMouseDown={startDrawing}
-                            onMouseUp={finishDrawing}
-                            onMouseMove={draw}
-                            ref={canvasRef}
-                        ></canvas>
-                    </div>
-                    :
-                    null}
+            {state === "Barbie" ?
+                <DrawFive />
+                :
+                null}
 
-                {state === "Casa" ?
-                    <div className="canvas-container">
-                        <canvas
-                            className="canvas-draw-6"
-                            onMouseDown={startDrawing}
-                            onMouseUp={finishDrawing}
-                            onMouseMove={draw}
-                            ref={canvasRef}
-                        ></canvas>
-                    </div>
-                    :
-                    null}
+            {state === "Casa" ?
+                <DrawSix />
+                :
+                null}
 
-                {state === "Paisajes" ?
-                    <div className="canvas-container">
-                        <canvas
-                            className="canvas-draw-7"
-                            onMouseDown={startDrawing}
-                            onMouseUp={finishDrawing}
-                            onMouseMove={draw}
-                            ref={canvasRef}
-                        ></canvas>
-                    </div>
-                    :
-                    null}
+            {state === "Paisajes" ?
+                <DrawSeven />
+                :
+                null}
 
-            </div>
+            {state === "None" ?
+                <DrawNone />
+                :
+                null}
 
         </div>
 
