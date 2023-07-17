@@ -7,7 +7,6 @@ function DrawFive() {
     const canvasRef = useRef(null);
     const contextRef = useRef(null);
     const [isDrawing, setIsDrawing] = useState(false);
-    const [state, setState] = useState("false");
 
     useEffect(() => {
 
