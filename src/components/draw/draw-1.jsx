@@ -267,7 +267,7 @@ function DrawOne() {
 
                 </div>
 
-                <select className="form-select" onChange={(e) => onChangeSizePincel(e)}>
+                <select className="form-select-2" onChange={(e) => onChangeSizePincel(e)}>
                     <option>Tamaño del pincel</option>
                     <option>5</option>
                     <option>7</option>
