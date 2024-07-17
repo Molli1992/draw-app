@@ -7,14 +7,13 @@
     url("https://static7.depositphotos.com/1001194/738/i/450/depositphotos_7384535-stock-photo-abstract-watercolor-background.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 150vh;
 }
 
 .body-canvas {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 70vh;
   gap: 30px;
   margin-bottom: 50px;
 }
